@@ -12,6 +12,10 @@ function getDynamicPaths(urlFilepathTable) {
   );
 }
 
+const dynamicRoutes = getDynamicPaths({
+  "/posts": "posts/*.md"
+});
+
 export default {
   /*
    ** Rendering mode
@@ -38,33 +42,17 @@ export default {
   },
 
   /*
-   ** Global CSS
-   ** Doc: https://nuxtjs.org/api/configuration-css
-   */
-  css: [],
-
-  /*
-   ** Plugins to load before mounting the App
-   ** Doc: https://nuxtjs.org/guide/plugins
-   */
-  plugins: [],
-
-  /*
    ** Nuxt.js modules
    ** Doc: https://nuxtjs.org/guide/modules
    */
   modules: [
     // Doc: https://http.nuxtjs.org
     "@nuxt/http",
-    // TODO: Remove it if you want to eject from codeSandbox
     "./codesandbox"
   ],
 
-  /*
-   ** HTTP module configuration
-   */
-  http: {
-    // See https://http.nuxtjs.org/api/#options
+  generate: {
+    routes: dynamicRoutes
   },
 
   /*
@@ -76,7 +64,8 @@ export default {
       // add frontmatter-markdown-loader
       config.module.rules.push({
         test: /\.md$/,
-        include: path.resolve(__dirname, "content"),
+        // include: path.resolve(__dirname, "content"),
+        include: "content",
         loader: "frontmatter-markdown-loader"
       });
     }
