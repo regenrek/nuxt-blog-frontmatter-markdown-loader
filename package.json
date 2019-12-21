@@ -1,0 +1,21 @@
+{
+  "name": "nuxt-blog-frontmatter-markdown-loader",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Nuxt.js Team",
+  "private": true,
+  "scripts": {
+    "dev": "MINIMAL=1 CSB=1 nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "post-update": "yarn upgrade --latest"
+  },
+  "dependencies": {
+    "@nuxt/http": "^0.3.0",
+    "frontmatter-markdown-loader": "3.1.0",
+    "nuxt": "^2.5.1",
+    "reqlim": "^0.0.0"
+  },
+  "keywords": []
+}
