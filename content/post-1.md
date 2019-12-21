@@ -1,5 +1,7 @@
 ---
-title: Why I don't care about the starbucks cup in Game of Thrones
+title: My first blog post
+tags:
+  - tag1
 ---
 
 Hey Everyone, this is simple a test blog post to show you
